@@ -14,7 +14,7 @@ export const getServerSideProps = async (context: GetServerSidePropsContext) => 
         lon = data[0].lon ? data[0].lon : lon
     }
     if (lat && lon) {
-        const res = await fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${process.env.OPEN_WEATHER_API_KEY}`)
+        const res = await fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${process.env.OPEN_WEATHER_API_KEY}`)
         const data: ForecastsType = await res.json()
 
         return { props: { data }}
