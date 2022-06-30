@@ -1,3 +1,5 @@
+import Head from "next/head"
+import Image from "next/image"
 import { useRouter } from "next/router"
 import { useEffect, useRef, useState } from "react"
 
@@ -13,9 +15,18 @@ export default function Layout(props: JSX.IntrinsicElements['div']) {
     }
 
     return (
-        <div {...props}>
-            <input ref={inputRef} type='text' placeholder="Enter city name.." />
-            <button disabled={isDisabled} onClick={handleSearch}>SEARCH</button>
+        <div className="layout" {...props}>   
+            <Head>
+                <title>PLUIE | Weather</title>
+                <link rel='icon' href='/weather/thunder.png' />
+            </Head>      
+            <div className="bg-image">
+                <Image src='/weather3.jpg' layout='fill' objectFit="cover"/>
+            </div>   
+            <form className="search">
+                <input ref={inputRef} type='text' placeholder="Enter city name.." />
+                <button disabled={isDisabled} onClick={handleSearch}><img src='/search.svg' /></button>
+            </form>
             {props.children}
         </div>
     )

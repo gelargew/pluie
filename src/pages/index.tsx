@@ -1,6 +1,7 @@
-import styles from '../styles/Home.module.css'
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
+import Layout from '../components/Layout'
+import styles from '../styles/home.module.css'
 
 
 
@@ -12,25 +13,21 @@ const Home = () => {
     const {latitude, longitude} = data.coords
     router.push(`/currentWeather/?lat=${latitude}&lon=${longitude}`)
   }
+  const geolocFailed = () => router.push('/currentWeather/?city=newyork')
 
   useEffect(() => {
-    navigator.geolocation.getCurrentPosition(geolocSuccess)
+    navigator.geolocation.getCurrentPosition(geolocSuccess, geolocFailed)
   }, [])
 
   return (
-    <div className={styles.container}>
-
-      <main>
-        <h1>asds</h1>
-        
+    <Layout>
+      <main className={styles.main} >
+        <h1>LA PLUIE</h1>
+        <div>search city and it might do some forecasting</div>
       </main>
-    </div>
+    </Layout>
   )
 }
-
-
-const setStorage = (key: string, value: string) => window.localStorage.setItem(key, value)
-
 
 
 export default Home

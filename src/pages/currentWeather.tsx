@@ -1,4 +1,5 @@
 import { GetServerSidePropsContext, InferGetServerSidePropsType } from "next"
+import Head from "next/head"
 import Forecasts from "../components/Forecasts"
 import { ForecastsType } from "../types"
 
@@ -30,8 +31,11 @@ export default function CurrentWeather({ data }: InferGetServerSidePropsType<typ
 
     return (
         <main>
-            {data && <Forecasts data={data} />}         
-            <button onClick={() => console.log(data)}>PRINTDATA</button>
+            <Head>
+                <title>{data?.city.name} | Weather</title>
+                <link rel='icon' href='/weather/thunder.png' />
+            </Head>
+            {data ? <Forecasts data={data} /> : <h1>oops, Forecasting might not happen</h1>}         
         </main>
     )
 }
