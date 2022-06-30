@@ -1,7 +1,8 @@
 <h1 id="construe" align="center"> PLUIE </h1>
-<p align-"center">it might do some forecasting</p>
+<h5 align-"center">it might do some forecasting</h5>
 </br>
-check it live at [plue.gelar.dev](https://pluie.gelar.dev/)
+
+check it live at  [plue.gelar.dev](https://pluie.gelar.dev/).
 
 </br>
 
@@ -9,9 +10,9 @@ check it live at [plue.gelar.dev](https://pluie.gelar.dev/)
 
 - clone the repo `git clone https://github.com/gelargew/pluie.git`
 - create a file called .env.local in the root directory
-- add your [open weather api][https://openweathermap.org/] inside .env.local
+- add your [open weather api key](https://openweathermap.org/) inside .env.local
 ```
-OPEN_WEATHER_API_KEY={your_api_key}
+OPEN_WEATHER_API_KEY={write_your_api_key_here}
 ```
 - run the server
 ```
