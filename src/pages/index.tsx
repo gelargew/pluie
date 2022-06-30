@@ -20,16 +20,14 @@ const Home = () => {
   }, [])
 
   return (
-    <Layout>
+      <main className={styles.main} >
         <Head>
           <title>PLUIE | Weather</title>
           <link rel='icon' href='/weather/thunder.png' />
         </Head>  
-      <main className={styles.main} >
         <h1>LA PLUIE</h1>
         <div>search city and it might do some forecasting</div>
       </main>
-    </Layout>
   )
 }
 

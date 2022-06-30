@@ -53,7 +53,7 @@ const SelectedForecast = () => {
             <h3>{timestamp}</h3>
             <img src={getWeatherIconURL(data.weather[0].icon)} />
             <ul>
-                <li>precipitation: {data.pop * 100}%</li>
+                <li>precipitation: {Math.round(data.pop * 100)}%</li>
                 <li>humidity: {data.main.humidity}%</li>
                 <li>wind: {data.wind.speed} m/s</li>
                 <li>clouds: {data.clouds.all} %</li>
