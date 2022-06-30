@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Layout from '../components/Layout'
-import styles from '../styles/home.module.css'
+import styles from '../styles/index.module.css'
 
 
 
