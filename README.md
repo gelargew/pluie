@@ -2,7 +2,7 @@
 <h5 align-"center">it might do some forecasting</h5>
 </br>
 
-check it live at  [plue.gelar.dev](https://pluie.gelar.dev/).
+check it live at  [pluie.gelar.dev](https://pluie.gelar.dev/).
 
 </br>
 
