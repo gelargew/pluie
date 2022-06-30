@@ -1,6 +1,7 @@
 .main {
     gap: 1rem;
     mix-blend-mode: difference;
+    height: 100%;
 }
 
 .main h1 {

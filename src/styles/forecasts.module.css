@@ -66,3 +66,29 @@
 .forecastList>li.selected {
     transform: scale(1.4);
 }
+
+
+@media (max-width: 900px) {
+    .forecasts {
+        padding: 0;
+    }
+
+    .selectedForecast {
+        margin: 0;
+    }
+
+    .forecastList {
+        margin: 0;
+        margin-top: 5rem;
+    }
+
+    .forecastList>li.selected {
+        transform: scale(1);
+        background: rgba(39, 39, 39, 0.842);
+
+    }
+
+    .forecastList>li {
+        width: 100px;
+    }
+}
